@@ -24,3 +24,19 @@ function evenFn(n) {
   return arr;
 }
 console.log(evenFn(20));
+
+function weekFn(n) {
+  switch (n) {
+    case 1: return 'Понедельнки';
+    case 2: return 'Вторник';
+    case 3: return 'Среда';
+    case 4: return 'Четверг';
+    case 5: return 'Пятница';
+    case 6: return 'Суббота';
+    case 7: return 'Воскресенье';
+    default:
+      return null;
+  }
+}
+
+console.log(weekFn(1));

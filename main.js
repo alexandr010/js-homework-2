@@ -42,9 +42,25 @@ function weekFn(n) {
 console.log(weekFn(1));
 
 function ageClassification(n) {
-  return n < 0 ? null : n >= 0 && n <= 24 ? 'детский возраст' : n >= 24 && n <= 44 ? 'молодой возраст' :
-  n >= 44 && n <= 65 ? 'средний возраст' : n >= 65 && n <= 75 ? 'пожилой возраст' : n >= 75 && n <= 90 ? 'старческий возраст' :
-  n >= 90 && n <= 122 ? 'долгожители' : null;
+  return n < 0 ? null :
+    n >= 0 && n <= 24 ? 'детский возраст' :
+      n >= 24 && n <= 44 ? 'молодой возраст' :
+        n >= 44 && n <= 65 ? 'средний возраст' :
+          n >= 65 && n <= 75 ? 'пожилой возраст' :
+            n >= 75 && n <= 90 ? 'старческий возраст' :
+              n >= 90 && n <= 122 ? 'долгожители' : null;
 }
 
 console.log(ageClassification(0));
+
+function oddFn(n) {
+  var arr = [];
+  var i = 0;
+  while (i++ < n) {
+    if (i % 2 !== 0) {
+      arr.push(i);
+    }
+  }
+  return arr;
+}
+console.log(oddFn(20));

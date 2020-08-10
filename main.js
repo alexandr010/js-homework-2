@@ -27,7 +27,7 @@ console.log(evenFn(20));
 
 function weekFn(n) {
   switch (n) {
-    case 1: return 'Понедельнки';
+    case 1: return 'Понедельник';
     case 2: return 'Вторник';
     case 3: return 'Среда';
     case 4: return 'Четверг';
@@ -64,3 +64,26 @@ function oddFn(n) {
   return arr;
 }
 console.log(oddFn(20));
+
+
+function mainFunc(a, b, callback) {
+  if (callback && typeof callback === 'function'){
+    return callback(a, b);
+  }
+  return false;
+}
+
+function cbPow (a, b) {
+  return Math.pow(a, b);
+}
+
+function cbRandom (a, b) {
+  return Math.ceil(Math.random() * (a - b + 1)) + b;
+}
+
+function cbAdd (a, b) {
+  return a + b;
+}
+console.log(mainFunc(4, 5, cbRandom));
+console.log(mainFunc(5, 5, cbPow));
+console.log(mainFunc(5, 8, cbAdd));
